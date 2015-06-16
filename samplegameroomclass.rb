@@ -1,8 +1,8 @@
 require_relative("samplegamegameclass")
 
-class Room < Consequence
+class Room
 	attr_accessor :exits
-	def initialize(room_number, message)
+	def initialize(room_number)
 		@room_number = room_number	
 		@message = message
 	end
@@ -10,7 +10,7 @@ class Room < Consequence
 		puts @message
 	end
 	def consequence
-		if 
+		
 	end
 end
 
