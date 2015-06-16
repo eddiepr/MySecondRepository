@@ -1,0 +1,1 @@
+puts "You are in a sunlit arboretum. There is a door to the north."
