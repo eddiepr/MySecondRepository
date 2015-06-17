@@ -1,0 +1,16 @@
+require_relative("engine_exercise_engine1_class")
+require_relative("engine_exercise_engine2_class")
+require_relative("engine_exercise_engine3_class")
+
+class Car
+	def initialize(engine)
+		@engine = engine
+	end
+	def start
+		@engine.sound
+		puts "whrrrrr" #other sound that a car makes aside from the engine
+	end
+end
+
+
+
