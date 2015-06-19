@@ -1,13 +1,14 @@
 #give me this position and if there is a piece there let me know
 require_relative("game_class")
+require("pry")
 class Board
 	attr_accessor :layout
-	def initialize(layout, from_position)
+	def initialize(layout)
 		@layout = layout
-		@from_position = from_position
 	end
-	def validate_position
-		if @layout[(@from_position[0]) - 1, (@from_position[1]) - 1] != nil 
+	def validate_position(from_position)
+		@from_position = from_position
+		if @layout[(@from_position[0])][(@from_position[1])] != nil 
 			puts "A piece is here"
 		else
 			puts "There is no piece here"

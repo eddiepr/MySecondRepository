@@ -5,11 +5,12 @@ class Game
 	attr_accessor :starting_layout
 	def initialize(starting_layout)
 		@starting_layout = starting_layout
+		@board = Board.new(@starting_layout)
 	end
 	def validate(from_position)
-		@from_position = from_position
-		board = Board.new(@starting_layout, @from_position)
-		board.validate_position
+		@from_position = [from_position[1] - 1, from_position[0] - 1]
+		
+		@board.validate_position(@from_position)
 
 		# if board[(@from_position[0]) - 1, (@from_position[1]) - 1] != nil 
 		# 	puts "A piece is here"

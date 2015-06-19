@@ -8,18 +8,19 @@ require_relative("queen_class")
 require_relative("pawn_class")
 
 
-layout = [["br", nil, nil, nil, nil, nil, nil, nil, "br"], 
-[nil, nil, nil, nil, nil, nil, nil, nil, nil],
-[nil, nil, nil, nil, nil, nil, nil, nil, nil],
-[nil, nil, nil, nil, nil, nil, nil, nil, nil],
-[nil, nil, nil, nil, nil, nil, nil, nil, nil],
-[nil, nil, nil, nil, nil, nil, nil, nil, nil],
-[nil, nil, nil, nil, nil, nil, nil, nil, nil],
-["wr", nil, nil, nil, nil, nil, nil, nil, "wr"]] 
+layout = [["br", nil, nil, nil, nil, nil, "br"], 
+[nil, nil, nil, nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil, nil, nil, nil],
+["wr", nil, nil, nil, nil, nil, nil, "wr"]] 
 
 
 game1 = Game.new(layout)
 game1.validate([1,8])
 game1.validate([5,4])
 game1.validate([3,8])
+game1.validate([8,8])
 
