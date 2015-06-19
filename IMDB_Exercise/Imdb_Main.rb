@@ -1,5 +1,6 @@
 # require('open-uri')
 require('imdb')
+require_relative("chart_class")
 
 file = IO.read("movies.txt").split("\n")
 
@@ -18,19 +19,19 @@ end
 # 	ratings_array.push(rating)
 # end
 
-puts array
+#puts array
 # array.sort_by {|b| b[0]}
-sorted_array = array.sort_by &:rating#fix this line
+sorted_array = array.sort_by &:rating
 
 # puts array
-sorted_array.each do | i, movie |
-	
-	print i
+sorted_array.each do | movie |
+	chart = Chart.new(movie.title, movie.rating)
+	chart.display
 	print movie.title
 	print ", "
 	puts movie.rating
-	i = i + 1
 end
+
 
 
 #puts "#{(file)}"
