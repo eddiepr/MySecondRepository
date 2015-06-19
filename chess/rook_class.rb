@@ -1,4 +1,5 @@
 class Rook
+	attr_accessor :from_position
 	def initialize(from_position)
 		@from_position = from_position
 	end
@@ -16,5 +17,8 @@ class Rook
 		else
 			puts "not a valid move"
 		end
+	end
+	def move?(start_position, end_position)
+
 	end
 end

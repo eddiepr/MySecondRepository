@@ -7,6 +7,7 @@ require_relative("bishop_class")
 require_relative("knight_class")
 require_relative("queen_class")
 require_relative("pawn_class")
+require_relative("class_piece")
 
 
 layout = [["br", nil, nil, nil, nil, nil, "br"], 
@@ -39,6 +40,18 @@ rook2.validate_destination([1,3])
 rook2.validate_destination([8,8])
 rook2.validate_destination([3,4])
 rook2.validate_destination([8,9])
+
+rook3 = Rook.new([1,8])
+puts "dhfdjkhgfjkhgfjkgf"
+game1.move_check(rook3.from_position, [8,8])
+puts "fgjjfgfjgjkfgjkfgjkfg"
+rook3.move?(rook3.from_position, [8,8])
+rook3.move?(rook3.from_position, [7,6])
+
+bishop1 = Bishop.new([3,1])
+
+piece1 = Piece.new(rook1)
+piece1.validate_move([6,5])
 
 
 

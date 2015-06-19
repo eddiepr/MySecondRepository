@@ -24,4 +24,7 @@ class Game
 				#is there a piece here
 				#tell the application there is something there or not
 	end
+	def move_check(starting_position, end_position)
+		self.validate(@from_position)
+	end
 end
