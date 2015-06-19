@@ -7,4 +7,19 @@ require_relative("knight_class")
 require_relative("queen_class")
 require_relative("pawn_class")
 
+layout = []
+starting_layout = [["br", nil, nil, nil, nil, nil, nil, nil, "br"], 
+[nil], 
+[nil], 
+[nil], 
+[nil], 
+[nil], 
+[nil], 
+["wr", nil, nil, nil, nil, nil, nil, nil, "wr"],] 
+
+
+game1 = Game.new(starting_layout)
+game1.validate([1,8])
+game1.validate([5,4])
+game1.validate([3,8])
 
