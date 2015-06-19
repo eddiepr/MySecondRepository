@@ -1,8 +1,16 @@
 require_relative("board_class")
+require_relative("rook_class")
 
 class Game
 	attr_accessor :from_position
 	attr_accessor :starting_layout
+	def self.check(end_coordinates)
+		@end_coordinates = end_coordinates
+		piece = Rook.new(@end_coordinates)
+		piece.validate_destination
+	end
+	def self.check_if_occupied
+	end
 	def initialize(starting_layout)
 		@starting_layout = starting_layout
 		@board = Board.new(@starting_layout)
