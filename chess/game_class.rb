@@ -5,9 +5,16 @@ class Game
 	def initialize(starting_layout)
 		@starting_layout = starting_layout
 	end
-	def validate(starting_position)
-		@starting_position = starting_position
-		board1 = Board.new(@starting_layout)
+	def validate(from_position)
+		@from_position = from_position
+		board = Board.new(@starting_layout)
+		board.validate_position
+
+		if board[(@from_position[0]) - 1, (@from_position[1]) - 1] != nil 
+			puts "A piece is here"
+		else
+			puts "There is no piece here"
+		end#@from_position is valid within the board1 do board check if there is a piece there method
 		#if @layout array contains starting_position array return valid message
 
 			# if position is valid return true
