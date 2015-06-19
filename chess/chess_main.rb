@@ -52,7 +52,7 @@ bishop1 = Bishop.new([3,1])
 
 piece1 = Piece.new(rook1)
 piece1.validate_move([6,5])
-
+#game.check()
 
 
 
