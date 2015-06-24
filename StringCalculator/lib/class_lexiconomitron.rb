@@ -11,4 +11,27 @@ class Lexiconomitron
 		end
 		return array
 	end
+	def oompa_loompa(array)
+		count = 0
+		array.each do |string|
+			self.eat_t(string)
+			if (string.length) >= 4
+				array.delete(count)
+				#string = ""
+			end
+			count = count + 1
+			string
+		end
+
+		# array.map do |string|
+		# 	self.eat_t(string)
+		# 	if (string.length) >= 4
+		# 		array.delete(count)
+		# 		#string = ""
+		# 	end
+		# 	count = count + 1
+		# 	string
+		# end
+		return array
+	end
 end
