@@ -10,4 +10,7 @@ RSpec.describe("Lexiconomitron") do
     it "reverses order of every word in array and removes each letter t" do
       expect(@lexi.shazam(["great", "scott!"])).to eq(["aerg", "!ocs"])
     end
+    it "removes all the words of 4 characters or more from array" do
+      expect(@lexi.oompa_loompa(["hen", "elizabeth", "the", "to", "craig"])).to eq(["hen", "he", "o"])
+    end
 end
