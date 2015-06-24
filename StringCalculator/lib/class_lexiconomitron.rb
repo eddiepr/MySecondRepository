@@ -4,4 +4,11 @@ class Lexiconomitron
 		string.delete! "T" 
 		return string
 	end
+	def shazam(array)
+		array.each do |string|
+			self.eat_t(string)
+			string.reverse!
+		end
+		return array
+	end
 end
