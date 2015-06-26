@@ -1,11 +1,26 @@
+body {
+	background-color: orange;
+}
+
+.check_body {
+	background-color: yellow;
+}
+
+.posters_div {
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle
+}
 .posters {
 	width: 250px;
 	height: 305px;
 	float: left;
-	margin-left: auto;
-	margin-top: auto;
+}
+.select {
+	float: left;
 }
 
-.posters_div {
+/*.posters_div {
 	
-}
+}*/
