@@ -1,0 +1,35 @@
+body {
+	background-color: #F5F5F5;
+}
+
+.gap {
+	height: 5px;
+	background-color: #F5F5F5;
+}
+
+.whale-img {
+	width: 30px;
+	height: 30px;
+}
+
+.color1 {
+	color: blue;
+}
+
+#tube {
+	height: 30px;
+	width: 30px;
+}
+
+.text1 {
+	font-size: 26px;
+}
+
+#circle {
+	width: 30px;
+	height: 30px;
+}
+
+#comments {
+	border-radius: 20px;
+}

@@ -2,7 +2,7 @@ body {
 	background-color: #F5F5F5;
 }
 
-.main-div {
+.inner-div {
 	background-color: white;
 }
 
@@ -26,6 +26,7 @@ body {
 }
 
 .box {
+	text-align: center;
 	border: 1px solid black;
 }
 
@@ -69,6 +70,18 @@ body {
 	height: 12px;
 }
 
+#comments2 {
+	height: 100px;
+	background-color: gray;
+}
+
+.html-buttons {
+	margin: auto;
+}
+
+.panel-heading {
+	margin-bottom: 20px;
+}
 
 
 
