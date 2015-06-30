@@ -1,0 +1,77 @@
+body {
+	background-color: #F5F5F5;
+}
+
+.main-div {
+	background-color: white;
+}
+
+.row {
+	height: 100px;
+	margin: auto;
+}
+
+#whale {
+	height: 40px;
+	width: 40px;
+}
+
+#tube {
+	height: 40px;
+	width: 40px;
+}
+
+#category {
+	font-size: 20px;
+}
+
+.box {
+	border: 1px solid black;
+}
+
+.count {
+	color: orange;
+}
+
+.glyphicon {
+	float:left;
+	padding: 2px;
+}
+
+.color1 {
+	color: blue;
+}
+
+#comments {
+	color: blue;
+	border-radius: 20px;
+}
+
+#circle {
+	height: 16px;
+	width: 16px;
+}
+
+.glyphicon {
+	color: #F3AB4C;
+}
+
+#css {
+	color: #aaa;
+}
+
+#now {
+	color: #F64F5A;
+}
+
+.circle2 {
+	width: 12px;
+	height: 12px;
+}
+
+
+
+
+
+
+
