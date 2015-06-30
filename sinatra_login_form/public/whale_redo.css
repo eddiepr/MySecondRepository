@@ -1,6 +1,9 @@
 body {
 	background-color: #F5F5F5;
 }
+.whale-container {
+	left: 20px;
+}
 
 .gap {
 	height: 5px;
