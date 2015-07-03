@@ -1,8 +1,34 @@
-.panel-heading {
+.first_row {
 	background-color: #f1f1f1;
+	padding-bottom: 11px;
+	padding-top: 11px;
 }
 
 .logo {
 
 	height: 32px;
+}
+
+.search_button {
+	background-color: #4285f4;
+	width: 50px;
+}
+
+.search_icon {
+	color: white;
+}
+
+.caret_button { 
+	border: none;
+}
+
+.gmail_button {
+	font-size: 16px;
+	color: #d14836;
+	border: none;
+}
+
+.top_row_right_buttons {
+	border: none;
+	background: none;
 }
