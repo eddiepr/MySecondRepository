@@ -1,0 +1,70 @@
+<body>
+
+<!-- <form action="/index" method="Post">
+	<label>artist</label>
+	<input type="text" name="artist" placeholder="artist">
+	</input>
+	<br>
+	<label>venue</label>
+	<input type="text" name="venue" placeholder="venue">
+	<br>
+	<label>date</label>
+	<input type="number" name="date" placeholder="date">
+	<br>
+	<label>city</label>
+	<input type="text" name="city" placeholder="city">
+	<br>
+	<label>ticket_price</label>
+	<input type="number" name="ticket_price" placeholder="ticket_price">
+	<br>
+	<label>description</label>
+	<input type="text" name="description" placeholder="description">
+
+	<button type="submit">submit</button>
+</form> -->
+
+<header> Form for concerts:</header>
+
+<%= form_for(@con) do |frm| %>
+	<div class="form-group">
+		<%= frm.label(:artist) %>
+		<%= frm.text_field(:artist, :class => "form-control") %>
+	</div>
+	<div class="form-group">
+		<%= frm.label(:date) %>
+		<%= frm.date_field(:date, :class => "form-control") %>
+	</div>
+	<div class="form-group">
+		<%= frm.label(:venue) %>
+		<%= frm.text_field(:venue, :class => "form-control") %>
+	</div>
+	<div class="form-group">
+		<%= frm.label(:city) %>
+		<%= frm.text_field(:city, :class => "form-control") %>
+	</div>
+	<div class="form-group">
+		<%= frm.label(:ticket_price) %>
+		<%= frm.text_field(:ticket_price, :class => "form-control") %>
+	</div>
+	<div class="form-group">
+		<%= frm.label(:description) %>
+		<%= frm.text_field(:description, :class => "form-control") %>
+	</div>
+
+
+
+
+	<button type="submit">Create New Entry</button>
+<%end%>
+
+
+<footer>placeholder</footer>
+
+</body>
+
+
+
+
+
+
+

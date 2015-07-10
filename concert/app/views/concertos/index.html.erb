@@ -1,0 +1,17 @@
+<h1> List of Concerts</h1>
+
+
+
+<% @cons.each do |concert|%>
+	<%= concert.artist %>, 
+	<%= concert.date %>, 
+	<%= concert.venue %>, 
+	<%= concert.city %>, 
+	<%= concert.ticket_price %>, 
+	<%= concert.description %>, 
+	<br>
+	<br>
+<%end%>
+
+
+<%= render("footer") %>

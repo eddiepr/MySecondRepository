@@ -1,0 +1,18 @@
+<h1>list of all of today's concerts</h1>
+
+<div class="col-sm-8">
+	<h2>Concerts that are today:</h2>
+	<% @cons_today.each do |concert|%>
+	<div class="row">
+	<%= link_to(concert.artist, concertos_path(concert.id), 
+			:method => :get, :data => {confirm: 'Are you sure?'}) %>
+	</div>
+		<br>
+		<br>
+	<%end%>
+</div>
+<div class="col-sm-4">
+
+</div>
+
+<%= render("footer") %>
