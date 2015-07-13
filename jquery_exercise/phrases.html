@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <style>
+
+
+    </style>
+  </head>
+  <body>
+      <div class="phrase-div">
+
+      </div>
+      <button class="refresh-button">Refresh</button>
+      <form class="phrase-form">
+        <input class="phrase-input">
+        </input>
+        <button class="add-phrase">add phrase to list</button>
+      </form>
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script>
+        $(document).on('ready', function () {
+          var phrases = [
+            'I like pie.',
+            'Hi guys.',
+            'Hello girls',
+            'I am Eddie'
+          ];
+          refresh();
+
+          function refresh(event) {
+            if (event){
+              event.preventDefault();
+            }
+            var phraselist = $('.phrase-div').append('<p></p>');
+            phraselist.text(phrases[Math.floor(Math.random() * (phrases.length)) + 0]);
+          }
+          // var addPhrase = function (newPhrase) {
+          //   phrases.push(newPhrase.toString());
+          //   console.log(phrases);
+          //   console.log($('.phrase-input').val());
+          // }
+          $('.refresh-button').on('click', refresh);
+          // $('.add-phrase').on('click', addPhrase($('.phrase-input').val()));
+          $('.add-phrase').on('click', function(event) {
+            event.preventDefault();
+            phrases.push($('.phrase-input').val());
+            console.log(phrases);
+          });
+        });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container" style="margin-top: 50px;">
+      <button class="btn btn-primary hello-button">Do Something</button>
+    </div>
+  
+      <p> I like pizza <p>
+        <h1 id="title"> jquery exercises</h1>
+        <button class="js-tacos">Tacos</button>
+        <button data-action="do stuff">Do Stuff</button>
+
+    <script type="text/javascript">
+      $('p').on('click', function() {
+        $(this).prepend('<p> this was prepend beneath the first paragraph</p>'); 
+        $(this).append('<p> this was appended beneath the first paragraph</p>'); 
+        $(this).before('<p> this was before beneath the first paragraph</p>'); 
+        $(this).after('<p> this was after beneath the first paragraph</p>'); 
+      });
+
+      $('#title').on('click', function(){
+        alert('element with id title has been clicked')
+      });
+
+      $('.js-tacos').on('click', function(){
+          alert('js-tacos element has been clicked')
+      })
+      
+      $('[data-action="do stuff"]').on('click', function(){
+          alert('do stuff button has been clicked')
+      })
+    </script>
+  </body>
+</html>
