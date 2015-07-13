@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <meta charset="UTF-8">
 
     <style>
@@ -10,14 +11,21 @@
   </head>
   <body>
       <div class="phrase-div">
-
       </div>
+      <ul class="list-of-phrases">
+      </ul>
       <button class="refresh-button">Refresh</button>
       <form class="phrase-form">
         <input class="phrase-input">
         </input>
         <button class="add-phrase">add phrase to list</button>
       </form>
+      <br>
+      <div class="container">
+        <div class="row">
+          <p><a class="showthis">Show</a> / <a class="hidethis">Hide</a> sentences</p>   
+        </div>
+      </div>
       <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script>
         $(document).on('ready', function () {
@@ -27,6 +35,13 @@
             'Hello girls',
             'I am Eddie'
           ];
+
+          phrases.forEach(function (phrase){
+            var list = $('.list-of-phrases');
+            list.append('<li>' + phrase + '</li>');
+            list.addClass('hide');
+          });
+          
           refresh();
 
           function refresh(event) {
@@ -36,19 +51,31 @@
             var phraselist = $('.phrase-div').append('<p></p>');
             phraselist.text(phrases[Math.floor(Math.random() * (phrases.length)) + 0]);
           }
-          // var addPhrase = function (newPhrase) {
-          //   phrases.push(newPhrase.toString());
-          //   console.log(phrases);
-          //   console.log($('.phrase-input').val());
-          // }
+         
           $('.refresh-button').on('click', refresh);
           // $('.add-phrase').on('click', addPhrase($('.phrase-input').val()));
-          $('.add-phrase').on('click', function(event) {
+          $('.phrase-form').on('submit', function(event) {
+            newInput = $('.phrase-input').val();
             event.preventDefault();
-            phrases.push($('.phrase-input').val());
+            phrases.push(newInput);
             console.log(phrases);
+            $('.list-of-phrases').append('<li>' + newInput + '</li>');
           });
-        });
+          $('.showthis').on('click', function () {
+            $('.list-of-phrases').removeClass('hidethis').addClass('showthis');
+            if ($('.list-of-phrases').hasClass('showthis')) {
+              var list = $('.list-of-phrases');
+              list.removeClass('hide');      
+            }
+          })
+          $('.hidethis').on('click', function () {
+            $('.list-of-phrases').removeClass('showthis').addClass('hidethis');
+            if ($('.list-of-phrases').hasClass('hidethis')) {
+              $('.list-of-phrases').addClass('hide');
+            }
+          })
+        })
+         
       </script>
   </body>
 </html>
