@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'concertos/:concerto_id' => "concertos#show" #, as: :concerto
   get '/' => 'concertos#home'
   get '/concertos.:id' => 'concertos#concert_info'
-  get '/concert_info' => 'concertos#concert_info' 
+  get '/concert_info' => 'concertos#concert_info'
+   
 
 
 
