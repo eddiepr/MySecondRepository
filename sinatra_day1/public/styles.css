@@ -1,0 +1,26 @@
+header {
+	height: 70px;
+	background-color: orange;
+}
+.row {
+	height: 100px;
+	background-color: blue;
+}
+.sec1 {
+	background-color: black;
+}
+.sec2 {
+	background-color: white;
+}
+.sec3 {
+	background-color: blue;
+}
+.sec4 {
+	background-color: black;
+}
+.sec5 {
+	background-color: red;
+}
+.sec6 {
+	background-color: white;
+}
