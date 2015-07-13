@@ -1,3 +1,57 @@
+// function fileActions(err, file){ 
+//     if (err) {
+//         console.log(err);
+//     }
+
+//     var episodes = JSON.parse(file)
+
+   
+//     var sorted_episodes = episodes.sort(function(a, b)
+//     {
+//     	return (a.episode_number)-(b.episode_number);
+//     });
+//     var filterEpisodes = function (episodes)
+//     {
+// 	    var filtered_sorted_episodes = sorted_episodes.filter(function(episode) 
+// 	    {
+// 	    	return episode.rating >= 8.5;
+// 	    })
+//     }
+
+
+//     filterEpisodes(sorted_episodes);
+//     filtered_sorted_episodes.forEach(function(episode) {
+//     	var searchFor = function () {
+//     		if (episode.description.indexOf("Eddard") > -1)
+// 			{
+// 				console.log("Episode number " + episode.episode_number + "contains Eddard")
+// 			}
+//     	}
+//     	searchFor();
+//     	// console.log(numbers);
+// 	    console.log("Title: " + episode.title + "Episode: #" + episode.episode_number);
+// 	    console.log(episode.description);
+// 	    var star_array = [];
+
+//     	for (i=1; i < parseInt(episode.rating) + 1; i++) 
+// 		{
+// 			star_array.push("*");
+// 		}
+// 		var star_string = star_array.toString()
+// 		for (i=1; i < parseInt(episode.rating) * 2; i++) 
+// 		{
+// 			star_string = star_string.replace(',','');
+// 		}
+// 	    console.log("Rating:" + episode.rating + " " + star_string);
+// 	    console.log('\n');		
+// 	});
+// }
+
+// module.exports = fileActions
+
+
+
+
 function fileActions(err, file){ 
     if (err) {
         console.log(err);

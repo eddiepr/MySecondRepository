@@ -24,6 +24,7 @@ screen_size[0]
 # puts string2
 
 slide1 = Slide.new(slides_array[0])
+formatting = Formatting.new(slides_array[0])
 startx1 = screen_size[1] - (slide1.length/2)
 starty1 = screen_size[0] / 2
 

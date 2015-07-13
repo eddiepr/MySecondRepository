@@ -36,7 +36,7 @@ var Question = function(question_object) {
 }
 
 
-Question.prototype.validate_answer = function (err, user_answer, begin_questions) 
+Question.prototype.validate_answer = function (user_answer, begin_questions) 
 {
 	if (user_answer === this.answer) {
 		console.log("correct answer");
@@ -45,6 +45,8 @@ Question.prototype.validate_answer = function (err, user_answer, begin_questions
 	}
 	else {
 		// console.log(quiz);
+		console.log(user_answer);
+		
 		console.log("wrong answer");
 		return false
 	}

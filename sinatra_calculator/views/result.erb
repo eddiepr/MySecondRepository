@@ -1,0 +1,14 @@
+<% if params[:operation] == "add" %>
+<%= params[:first] %> +
+<%= params[:second] %> = <%= @answer_add %>
+<% end %>
+
+<% if params[:operation] == "subtract" %>
+<%= params[:first] %> -
+<%= params[:second] %> = <%= @answer_sub %>
+<% end %>
+
+<% if params[:operation] == "divide" %>
+<%= params[:first] %> /
+<%= params[:second] %> = <%= @answer_div %>
+<% end %>

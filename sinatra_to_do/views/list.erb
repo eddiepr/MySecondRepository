@@ -1,10 +1,10 @@
 
 <h1>To Do List</h1>
 
-<%= @list_array.each do |task|
-		task.content
-	end %>
+<% @list_array.each do |task| %>
+	<%=	task.content %>
+	<% end %>
 <br>
 <br>
 
-<a href="/newTask">Add more to list</a>
+<a href="/addnewtasks">Add more to list</a>

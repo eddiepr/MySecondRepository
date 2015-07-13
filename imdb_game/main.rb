@@ -13,6 +13,9 @@ post '/guess' do
 	search = Imdb::Search.new(word)
 	puts "SEARCH #{search.movies.size}"
 	movie = search.movies[0..14]
+	dates = movie.each map | movie | 
+				movie.release_date
+			end
 	puts "SEARCH MOVIE #{movie.size}"
 	filter = Filter.new
 	filter.forage(movie)
@@ -23,7 +26,8 @@ post '/guess' do
 	erb(:movie_displays)
 end
 
-post '/answer' do	
+get '/checkanswer' do	
+	filter.release_date
 	redirect "/answer"
 	erb(:check_answer)
 end

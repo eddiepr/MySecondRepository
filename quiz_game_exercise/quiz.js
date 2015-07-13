@@ -20,8 +20,18 @@ Quiz.prototype.begin_questions = function () {
 }
 
 Quiz.prototype.validate_quiz_answer = function(){
-	if (this.current_question.validate_answer === true){
-		console.log("Winner winner")
+	if (this.current_question.validate_answer( options,function () {
+		options = 
+		{
+		    prompt: this.current_question.question
+		}
+		// var validate_answer = this.current_question.validate_answer();
+		read(options, this.validate_quiz_answer.bind(this));
+		console.log("test");
+	}) === true)
+
+	{
+		this.begin_questions;
 	}
 }
 

@@ -13,6 +13,11 @@ RSpec.describe("Cell") do
       expect(cell1.live_on).to eq(true)
     end
 
+    it ("A live cell with two or three live neighbours lives on to the next generation.") do
+      cell1 = Cell.new(1, [0,0,0,0,0,0,1,1])
+      expect(cell1.live_on).to eq(true)
+    end
+
     it ("A live cell with more than three live neighbours dies, as if by overcrowding.") do
       cell1 = Cell.new(1, [0,0,0,0,1,1,1,1])
       expect(cell1.live_on).to eq(false)

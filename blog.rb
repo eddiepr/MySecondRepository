@@ -1,3 +1,5 @@
+require 'pry'
+
 class Blog
 	def initialize 
 		@posts = []
@@ -18,7 +20,7 @@ class Post
 		@title = title
 		@date = date
 		@text = text
-		#return [@title, @date, @text]
+		#return [@title, @date, @text]  
 	end
 	def print_post
 		puts @title
@@ -39,3 +41,6 @@ blog1.add_post(post2)
 blog1.add_post(post3)
 blog1.publish_front_page
 post1.print_post
+
+
+100 times.do (binding.pry)

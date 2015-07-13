@@ -1,8 +1,8 @@
 class Cell
 	def initialize(state, neighbours)
 		@state = state # either 1 or 0 for alive or dead
-		@neighbours = neighbours # an array that represents the surrounding cells
-		@sum = @neighbours.inject(0) do |sum,x| 
+ # an array that represents the surrounding cells
+		@sum = neighbours.reduce(0) do |sum,x| 
 			sum + x 
 		end
 	end
