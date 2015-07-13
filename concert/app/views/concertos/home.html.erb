@@ -4,7 +4,7 @@
 	<h2>Concerts that are today:</h2>
 	<% @cons_today.each do |concert|%>
 	<div class="row">
-	<%= link_to(concert.artist, concertos_path(concert.id), 
+	<%= link_to(concert.artist, concerto_path(concert.id), 
 			:method => :get, :data => {confirm: 'Are you sure?'}) %>
 	</div>
 		<br>

@@ -21,7 +21,11 @@ class ConcertosController < ApplicationController
 		end
 	end
 
-	def display 
+	def show
+		render("show")
+	end
+
+	def index 
 		@cons = Concerto.retrieve
 		
 		render("index")

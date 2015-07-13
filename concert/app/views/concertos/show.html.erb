@@ -1,0 +1,18 @@
+<h1> Information About your selected concert </h1>
+
+<% con = Concerto.find_by_id(params[:id])%>
+
+Date: 
+<%= con.date %>
+<br>
+Venue: 
+<%= con.venue %>
+<br>
+City: 
+<%= con.city %>
+<br>
+ticket price: 
+<%= con.ticket_price %>
+<br>
+Description: 
+<%= con.description %>
