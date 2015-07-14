@@ -38,7 +38,7 @@
 
           phrases.forEach(function (phrase){
             var list = $('.list-of-phrases');
-            list.append('<li>' + phrase + '</li>');
+            list.append('<li>' + phrase + ' <span class="glyphicon glyphicon-remove glyph"></span>' + '</li>');
             list.addClass('hide');
           });
           
@@ -59,7 +59,11 @@
             event.preventDefault();
             phrases.push(newInput);
             console.log(phrases);
-            $('.list-of-phrases').append('<li>' + newInput + '</li>');
+            $('.list-of-phrases').append('<li>' + newInput + ' <span class="glyphicon glyphicon-remove glyph"></span>' + '</li>');
+            $('.glyph').on('click', function () {
+            $(this).closest('li').remove();
+              console.log("yes");
+            });
           });
           $('.showthis').on('click', function () {
             $('.list-of-phrases').removeClass('hidethis').addClass('showthis');
@@ -74,6 +78,10 @@
               $('.list-of-phrases').addClass('hide');
             }
           })
+          $('.glyph').on('click', function () {
+            $(this).closest('li').remove();
+            console.log("yes");
+          });
         })
          
       </script>
