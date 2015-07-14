@@ -1,23 +1,26 @@
 
-function onSaveSuccessTrack () {
-
+function onSaveSuccessTrack (track) {
+	console.log(track);
+	
+	$('.track-list').remove();
+	track.tracks.items.forEach(function (item) {	
+		$('.artist-list').prepend("<li class='track-list'>" + "<a target=”_blank” href='" + item.uri + "'>" + "</a>" + "</li>")
+	})
 }
 
 function onSaveFailureTrack () {
 	console.log("error!")
 }
 
-
-
 function onSaveSuccessAlbum (album) {
-	console.log(album);
+	console.log("Hello");
 	$('.album-list').remove();
-	album.albums.items.forEach(function (item) {	
+	album.albums.items.forEach(function (item) {
+		console.log("Hello")	
 		$('.artist-list').prepend("<li class='album-list'>" + item.name + "</li>")
-		$('.artist-list').addClass('listed');
 	})
-
 	$('.album-list').on('click', function () {
+		console.log("clicked");
 		$.ajax({
 			type: "GET",
 			url: "https://api.spotify.com/v1/search?type=track&query=" + $(this).text(),
@@ -60,10 +63,6 @@ function onSaveSuccessArtist (artist) {
 function onSaveFailureArtist () {
 	console.log("error!");
 }
-
-
-
-
 
 function onSubmit (event) {
 	event.preventDefault();

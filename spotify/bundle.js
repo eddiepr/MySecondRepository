@@ -1,7 +1,11 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
-function onSaveSuccessTrack () {
-
+function onSaveSuccessTrack (track) {
+	console.log("track");
+	// $('.track-list').remove();
+	// track.tracks.items.forEach(function (item) {	
+	// 	$('.artist-list').prepend("<li class='track-list'>" + <a> + item.name + "</li>")
+	// })
 }
 
 function onSaveFailureTrack () {
@@ -11,14 +15,14 @@ function onSaveFailureTrack () {
 
 
 function onSaveSuccessAlbum (album) {
-	console.log(album);
+	console.log("Hello");
 	$('.album-list').remove();
-	album.albums.items.forEach(function (item) {	
+	album.albums.items.forEach(function (item) {
+		console.log("Hello")	
 		$('.artist-list').prepend("<li class='album-list'>" + item.name + "</li>")
-		$('.artist-list').addClass('listed');
 	})
-
 	$('.album-list').on('click', function () {
+		console.log("clicked");
 		$.ajax({
 			type: "GET",
 			url: "https://api.spotify.com/v1/search?type=track&query=" + $(this).text(),
