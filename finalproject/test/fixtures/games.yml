@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  turn: MyString
+  finished: false
+  winner: MyString
+
+two:
+  turn: MyString
+  finished: false
+  winner: MyString
