@@ -1,8 +1,15 @@
 
+<!-- this partial is a column -->
+
 <div class="row">
 	<% 8.times do |i| %>
-		<div class="col-sm-1 column <%= 'column' + i.to_s %>">
-		</div>
+		<% if (i%2 == 0) %>
+			<div class="col-sm-1 column <%= 'column' + i.to_s %> 'row-odd-column-even' ">
+			</div>
+		<% else %>
+			<div class="col-sm-1 column <%= 'column' + i.to_s %> 'row-odd-column-odd' ">
+			</div>
+		<% end %>
 		<% i = i + 1 %>
 	<% end %>
 </div>
